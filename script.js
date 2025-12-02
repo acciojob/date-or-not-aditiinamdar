@@ -3,7 +3,7 @@ var isDate = function (input) {
 	 if (input == null) return false;
     
     if (input instanceof Date) {
-        return true;
+        return !isNaN(input.getTime());
     }
     
     if (typeof input === 'number' || typeof input === 'string') {
